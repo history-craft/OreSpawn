@@ -222,7 +222,7 @@ public class TheQueen extends EntityMob
             final float f = 7.0f;
             if (this.worldObj.rand.nextInt(4) == 1) {
                 for (int i = 0; i < 10; ++i) {
-                    this.worldObj.spawnParticle("fireworksSpark", this.posX - f * Math.sin(Math.toRadians(this.rotationYaw)), this.posY + 14.0, this.posZ + f * Math.cos(Math.toRadians(this.rotationYaw)), (this.worldObj.rand.nextGaussian() - this.worldObj.rand.nextGaussian()) / 5.0 + this.motionX * 3.0, (this.worldObj.rand.nextGaussian() - this.worldObj.rand.nextGaussian()) / 5.0, (this.worldObj.rand.nextGaussian() - this.worldObj.rand.nextGaussian()) / 5.0 + this.motionZ * 3.0);
+                    this.world.spawnParticle("fireworksSpark", this.posX - f * Math.sin(Math.toRadians(this.rotationYaw)), this.posY + 14.0, this.posZ + f * Math.cos(Math.toRadians(this.rotationYaw)), (this.worldObj.rand.nextGaussian() - this.worldObj.rand.nextGaussian()) / 5.0 + this.motionX * 3.0, (this.worldObj.rand.nextGaussian() - this.worldObj.rand.nextGaussian()) / 5.0, (this.worldObj.rand.nextGaussian() - this.worldObj.rand.nextGaussian()) / 5.0 + this.motionZ * 3.0);
                 }
             }
         }
@@ -973,7 +973,7 @@ public class TheQueen extends EntityMob
             this.head_found = 1;
             return null;
         }
-        final List var5 = this.worldObj.getEntitiesWithinAABB((Class)EntityLivingBase.class, this.boundingBox.expand(80.0, 60.0, 80.0));
+        final List var5 = this.world.getEntitiesWithinAABB((Class)EntityLivingBase.class, this.getEntityBoundingBox().expand(80.0, 60.0, 80.0));
         Collections.sort((List<Object>)var5, this.TargetSorter);
         final Iterator var6 = var5.iterator();
         Entity var7 = null;

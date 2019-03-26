@@ -5,21 +5,20 @@ import net.minecraftforge.common.config.*;
 import net.minecraft.creativetab.*;
 import net.minecraftforge.common.util.*;
 import net.minecraft.init.*;
-import cpw.mods.fml.common.registry.*;
 import net.minecraft.world.biome.*;
-import cpw.mods.fml.common.*;
 import net.minecraftforge.common.*;
-import cpw.mods.fml.common.network.*;
 import net.minecraft.block.*;
-import cpw.mods.fml.common.event.*;
 import net.minecraft.world.*;
 import net.minecraft.entity.*;
-import cpw.mods.fml.relauncher.*;
 import net.minecraft.entity.player.*;
 import java.util.*;
 import net.minecraft.util.*;
 import net.minecraft.world.chunk.*;
 import net.minecraft.world.chunk.storage.*;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = "OreSpawn", name = "OreSpawn", version = "1.7.10.20.3")
 public class OreSpawnMain
@@ -1271,7 +1270,7 @@ public class OreSpawnMain
         OreSpawnMain.DimensionID6 = OreSpawnMain.BaseDimensionID + 5;
         OreSpawnMain.proxy.registerSoundThings();
         this.laySomeEggs();
-        OreSpawnMain.MyOreUraniumBlock = new OreUranium(OreSpawnMain.BaseBlockID + 101).setBlockName("oreuranium");
+        OreSpawnMain.MyOreUraniumBlock = new OreUranium(OreSpawnMain.BaseBlockID + 101).setUnlocalizedName("oreuranium");
         OreSpawnMain.MyOreTitaniumBlock = new OreTitanium(OreSpawnMain.BaseBlockID + 102).setBlockName("oretitanium");
         OreSpawnMain.MyIngotUranium = new IngotUranium(OreSpawnMain.BaseItemID + 152).setUnlocalizedName("ingoturanium");
         OreSpawnMain.MyIngotTitanium = new IngotTitanium(OreSpawnMain.BaseItemID + 153).setUnlocalizedName("ingottitanium");

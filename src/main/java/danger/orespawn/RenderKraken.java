@@ -13,7 +13,7 @@ public class RenderKraken extends RenderLiving
     private static final ResourceLocation texture;
     
     public RenderKraken(final ModelKraken par1ModelBase, final float par2, final float par3) {
-        super((ModelBase)par1ModelBase, par2 * par3);
+        super(null,(ModelBase)par1ModelBase, par2 * par3);
         this.scale = 1.0f;
         this.model = (ModelKraken)this.mainModel;
         this.scale = par3;
