@@ -500,19 +500,19 @@ public class RubberDucky extends EntityTameable
     }
     
     public final int getAttacking() {
-        return this.dataWatcher.getWatchableObjectByte(23);
+        return this.dataWatcher.getWatchableObjectInt(23);
     }
     
     public final void setAttacking(final int par1) {
-        this.dataWatcher.updateObject(23, (Object)(byte)par1);
+        this.dataWatcher.updateObject(23, par1);
     }
     
     public final int getKillCount() {
-        return this.dataWatcher.getWatchableObjectByte(22);
+        return this.dataWatcher.getWatchableObjectInt(22);
     }
     
     public final void setKillCount(final int par1) {
-        this.dataWatcher.updateObject(22, (Object)(byte)par1);
+        this.dataWatcher.updateObject(22, par1);
         this.killcount = par1;
     }
     

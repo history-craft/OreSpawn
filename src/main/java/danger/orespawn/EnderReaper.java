@@ -36,7 +36,7 @@ public class EnderReaper extends EntityMob
     
     protected void entityInit() {
         super.entityInit();
-        this.dataWatcher.addObject(18, (Object)new Byte((byte)0));
+        this.dataWatcher.addObject(18, 0);
     }
     
     public void writeEntityToNBT(final NBTTagCompound par1NBTTagCompound) {
@@ -276,11 +276,11 @@ public class EnderReaper extends EntityMob
     }
     
     public boolean isScreaming() {
-        return this.dataWatcher.getWatchableObjectByte(18) > 0;
+        return this.dataWatcher.getWatchableObjectInt(18) > 0;
     }
     
     public void setScreaming(final boolean par1) {
-        this.dataWatcher.updateObject(18, (Object)(byte)(par1 ? 1 : 0));
+        this.dataWatcher.updateObject(18, (par1 ? 1 : 0));
     }
     
     static {

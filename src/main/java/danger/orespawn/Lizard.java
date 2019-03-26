@@ -375,11 +375,11 @@ public class Lizard extends EntityCannonFodder
     }
     
     public final int getAttacking() {
-        return this.dataWatcher.getWatchableObjectByte(23);
+        return this.dataWatcher.getWatchableObjectInt(23);
     }
     
     public final void setAttacking(final int par1) {
-        this.dataWatcher.updateObject(23, (Object)(byte)par1);
+        this.dataWatcher.updateObject(23, par1);
     }
     
     public boolean getCanSpawnHere() {

@@ -52,8 +52,8 @@ public class Robot4 extends EntityMob
     
     protected void entityInit() {
         super.entityInit();
-        this.dataWatcher.addObject(20, (Object)0);
-        this.dataWatcher.addObject(21, (Object)0);
+        this.dataWatcher.addObject(20, 0);
+        this.dataWatcher.addObject(21, 0);
         if (this.renderdata == null) {
             this.renderdata = new RenderInfo();
         }
@@ -383,19 +383,19 @@ public class Robot4 extends EntityMob
     }
     
     public final int getAttacking() {
-        return this.dataWatcher.getWatchableObjectByte(20);
+        return this.dataWatcher.getWatchableObjectInt(20);
     }
     
     public final void setAttacking(final int par1) {
-        this.dataWatcher.updateObject(20, (Object)(byte)par1);
+        this.dataWatcher.updateObject(20, par1);
     }
     
     public final int getShielding() {
-        return this.dataWatcher.getWatchableObjectByte(21);
+        return this.dataWatcher.getWatchableObjectInt(21);
     }
     
     public final void setShielding(final int par1) {
-        this.dataWatcher.updateObject(21, (Object)(byte)par1);
+        this.dataWatcher.updateObject(21, par1);
     }
     
     public boolean getCanSpawnHere() {

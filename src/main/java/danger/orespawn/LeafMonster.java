@@ -44,11 +44,11 @@ public class LeafMonster extends EntityMob
     }
     
     public final int getAttacking() {
-        return (int) this.dataWatcher.getWatchableObjectInt (20);
+        return (int) this.dataWatcher.getWatchableObjectInt(20);
     }
     
     public final void setAttacking(final int par1) {
-        this.dataWatcher.updateObject(20, (Object)(byte)par1);
+        this.dataWatcher.updateObject(20, par1);
     }
     
     public int mygetMaxHealth() {

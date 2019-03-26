@@ -332,11 +332,11 @@ public class Irukandji extends EntityMob
     }
     
     public final int getAttacking() {
-        return this.dataWatcher.getWatchableObjectByte(20);
+        return this.dataWatcher.getWatchableObjectInt(20);
     }
     
     public final void setAttacking(final int par1) {
-        this.dataWatcher.updateObject(20, (Object)(byte)par1);
+        this.dataWatcher.updateObject(20, par1);
     }
     
     private int findBuddies() {

@@ -70,9 +70,9 @@ public class Stinky extends EntityTameable
     protected void entityInit() {
         super.entityInit();
         this.activity = 1;
-        this.dataWatcher.addObject(22, (Object)0);
-        this.dataWatcher.addObject(21, (Object)this.activity);
-        this.dataWatcher.addObject(20, (Object)1);
+        this.dataWatcher.addObject(22, 0);
+        this.dataWatcher.addObject(21, this.activity);
+        this.dataWatcher.addObject(20, 1);
         this.setSitting(false);
         this.setTamed(false);
     }
@@ -87,10 +87,10 @@ public class Stinky extends EntityTameable
     public void readEntityFromNBT(final NBTTagCompound par1NBTTagCompound) {
         super.readEntityFromNBT(par1NBTTagCompound);
         this.activity = par1NBTTagCompound.getInteger("SpyroActivity");
-        this.dataWatcher.updateObject(21, (Object)this.activity);
-        this.dataWatcher.updateObject(20, (Object)par1NBTTagCompound.getInteger("SpyroFire"));
+        this.dataWatcher.updateObject(21, this.activity);
+        this.dataWatcher.updateObject(20, par1NBTTagCompound.getInteger("SpyroFire"));
         this.skin_color = par1NBTTagCompound.getInteger("StinkySkin");
-        this.dataWatcher.updateObject(22, (Object)this.skin_color);
+        this.dataWatcher.updateObject(22, this.skin_color);
     }
     
     public int getActivity() {
@@ -100,7 +100,7 @@ public class Stinky extends EntityTameable
     
     public void setActivity(final int par1) {
         this.activity = par1;
-        this.dataWatcher.updateObject(21, (Object)par1);
+        this.dataWatcher.updateObject(21, par1);
     }
     
     public int getSpyroFire() {
@@ -108,7 +108,7 @@ public class Stinky extends EntityTameable
     }
     
     public void setSpyroFire(final int par1) {
-        this.dataWatcher.updateObject(20, (Object)par1);
+        this.dataWatcher.updateObject(20, par1);
     }
     
     public int getSkin() {
@@ -118,8 +118,8 @@ public class Stinky extends EntityTameable
     
     public void setSkin(final int par1) {
         this.skin_color = par1;
-        this.dataWatcher.updateObject(22, (Object)0);
-        this.dataWatcher.updateObject(22, (Object)par1);
+        this.dataWatcher.updateObject(22, 0);
+        this.dataWatcher.updateObject(22, par1);
     }
     
     public boolean isAIEnabled() {
